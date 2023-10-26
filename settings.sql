@@ -1,0 +1,3 @@
+CREATE DATABASE tipper;
+CREATE USER tipperuser WITH PASSWORD 'tipper';
+GRANT ALL PRIVILEGES ON DATABASE tipper TO tipperuser;
