@@ -33,3 +33,12 @@ class Registration(APIView):
         password = request.data.get('password')
         user = User.objects.create_user(username=username, password=password)
         return Response({'message': 'Registration successful'})
+
+class PostList(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    
