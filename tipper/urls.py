@@ -5,6 +5,8 @@ urlpatterns =[
     path('login/', Login.as_view(), name='login'),
     path('logout/', Logout.as_view(), name='logout'),
     path('registration/', Registration.as_view(), name='registration'),
-    path('list/', Post.as_view(), name='post_list'),
-    path('detail/', Post.as_view(), name='post_detail'),
+    path('post-list/', PostList.as_view(), name='post_list'),
+    path('post-detail/', PostDetail.as_view(), name='post_detail'),
+    path('comment-list/', CommentList.as_view(), name='comment_list'),
+    path('comment-detail/', CommentDetail.as_view(), name='comment_detail'),
 ]

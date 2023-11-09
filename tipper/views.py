@@ -6,6 +6,7 @@ from .models import *
 from .serializers import *
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
+from rest_framework import generics
 
 class Login(APIView):
     def post(self, request):
@@ -41,4 +42,12 @@ class PostList(generics.ListCreateAPIView):
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+class CommentList(generics.ListCreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
     
