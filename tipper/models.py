@@ -6,7 +6,7 @@ class Post(models.Model):
     id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     address = models.CharField(max_length=155)
     first_name = models.CharField(max_length=55)
-    last_inital = models.CharField(max_length=1)
+    last_initial = models.CharField(max_length=5)
     bill = models.FloatField()
     tip = models.FloatField()
     post= models.CharField(max_length=1000)
